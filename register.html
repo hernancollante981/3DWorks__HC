@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3DWorks</title>
+
+    <!--style css-->
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <!--favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicon/favicon-16x16.png"
+    />
+    <link
+      srel="manifest"
+      href="./assets/img/favicon/site.webmanifest
+    "
+    />
+    <!--mediaqueries css-->
+    <link rel="stylesheet" href="./assets/mediaqueries.css" />
+
+    <!--fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/ce3573d0d5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <!--body-->
+  <body class="body">
+    <!--Header-->
+    <header class="header">
+      <!--Navbar-->
+      <nav class="header__navbar navbar">
+        <!--logo de la barra de navegacion-->
+        <a href="./index.html"
+          ><img
+            src="./assets/img/logo__3dworks-removebg-preview.png"
+            alt="logo"
+            class="navbar__logo"
+          />
+        </a>
+        <!--se agrega el label con la imagen del menu-->
+        <label for="toggle-menu" class="navbar__toggle-menu">
+          <i class="fa fa-bars"></i>
+        </label>
+        <!--agrego el input y lo linkeo al label-->
+        <input type="checkbox" id="toggle-menu" />
+        <!--aca arranca el menu-->
+        <ul class="navbar__list">
+          <li class="navbar__link"><a href="./index.html">Inicio</a></li>
+          <li class="navbar__link"><a href="#contact">Contacto</a></li>
+        </ul>
+        <a class="btn--user" href="./login.html"
+          ><i class="fa-sharp fa-solid fa-circle-user"></i
+        ></a>
+      </nav>
+    </header>
+    <!--Main-->
+    <main class="main">
+      <!--sección  de formuario -->
+
+      <section class="section form__section">
+        <form action="./index.html" class="form__content">
+          <h2 class="form__title">Registro</h2>
+          <label for="nombre">Nombre</label>
+
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Ingrese su nombre"
+            required
+          />
+
+          <label for="apellido">Apellido</label>
+          <input
+            type="text"
+            id="apellido"
+            placeholder="Escriba su Apellido"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Escriba su Email"
+            required
+          />
+
+          <label for="contraseña">Contraseña</label>
+          <input
+            type="password"
+            id="contraseña"
+            placeholder="elige una contraseña"
+            required
+          />
+          <br />
+          <label for="checkbox">
+            <input type="checkbox" id="checkbox" required />
+            estoy de acuerdo con
+            <span class="form__span-checkbox">la informacion brindada</span>
+          </label>
+          <button class="btn--form" type="submit">Registrarse</button>
+        </form>
+      </section>
+
+      <!--sección de contacto-->
+
+      <section id="contact" class="section contact__section">
+        <div class="contact__content">
+          <h2 class="contact__title">Contacto</h2>
+          <div class="contact__info">
+            <div class="contact__info-colum">
+              <h3 class="contact__info-title">Cordoba Capital - Argentina</h3>
+              <a
+                class="contact__info-link"
+                href="https://www.google.com/maps/place/Plaza+Rivadavia/@-31.3628892,-64.1605114,13z/data=!4m6!3m5!1s0x943298678b7d6461:0xf705f399f40ffc54!8m2!3d-31.3916664!4d-64.18484!16s%2Fg%2F11bx89cw8s?entry=ttu"
+                target="_blank"
+                ><i class="fa-solid fa-shop"></i>Barrio Juan B Justo</a
+              >
+              <a
+                class="contact__info-link"
+                href="https://outlook.live.com/owa/"
+                target="_blank"
+                ><i class="fa-sharp fa-regular fa-envelope"></i
+                >3Dworks_@gmail</a
+              >
+              <a
+                class="contact__info-link"
+                href="https://wa.me/5493516827859"
+                target="_blank"
+                ><i class="fa-sharp fa-solid fa-phone"></i>+54 3516827859</a
+              >
+            </div>
+          </div>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9566.245594364776!2d-64.17609871113005!3d-31.367613765996364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432afb6a14524a5%3A0x534e4b7a03f5dcdc!2sAXION%20energy!5e0!3m2!1ses!2sar!4v1685974905746!5m2!1ses!2sar"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </main>
+
+    <!--footer-->
+
+    <footer class="footer">
+      <div class="footer__nav">
+        <ul class="footer__nav-menu">
+          <li class="footer__nav-link"><a href="#hero">Privacidad</a></li>
+          <li class="footer__nav-link"><a href="#about">Terminos de uso</a></li>
+          <li class="footer__nav-link"><a href="#contact">contactanos</a></li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <h3 class="footer__social-title">Redes</h3>
+        <div class="footer__social-icons">
+          <i class="fa-brands fa-twitter"><a href="">Twitter</a></i>
+          <i class="fa-brands fa-instagram"><a href="">Instagram</a></i>
+          <i class="fa fa-facebook"><a href="">Facebook</a></i>
+        </div>
+      </div>
+      <p class="footer__copyright">
+        © 2023 TrabajoIntegradorHernan.<span class="footer__copyright--span"
+          >Todos los derechos reservados.</span
+        >
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+/* Estilos generales */
+@media screen and (max-width: 998px) {
+  .body {
+    width: 100%;
+  }
+  /* Header Navbar */
+  .header__navbar {
+    width: 100%;
+  }
+  /*navbar logo*/
+  .navbar_logo {
+    min-width: 150px;
+  }
+  /* toggle menu*/
+  .navbar__toggle-menu {
+    display: block;
+    font-size: 32px;
+    color: #fff;
+  }
+  /*Navbar List*/
+  .navbar__list {
+    top: 60px;
+    left: 48%;
+    right: 0;
+    width: 50%;
+    position: absolute;
+    flex-direction: column;
+    background: url(./img/hvxmg3c3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: none;
+    padding: 80px 30px;
+    border-radius: 0px 0px 15px 15px;
+    border: 2px solid blue;
+    border-top: 0px;
+  }
+  #toggle-menu:checked ~ .navbar__list {
+    display: flex;
+  }
+  .navbar__link a {
+    background-color: red;
+    font-size: 18px;
+  }
+
+  /*botones agregados */
+  .btn--upload {
+    background-color: blue;
+  }
+
+  /*main*/
+  .main {
+    max-width: 100%;
+  }
+
+  /*  Hero section */
+  .hero__section {
+    gap: 30px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__title {
+    width: 100%;
+    max-width: 500px;
+  }
+  .hero__span--title {
+  }
+  .hero__p {
+    width: 100%;
+    font-size: 16px;
+    max-width: 600px;
+    height: auto;
+  }
+  .hero__buttons {
+    width: auto;
+  }
+  .hero__image {
+    min-width: 400px;
+    height: auto;
+    margin-top: 90px;
+  }
+  /*about section*/
+  .about__section {
+    max-width: 100%;
+    height: auto;
+  }
+  .about__content {
+    height: auto;
+    max-width: 100%;
+  }
+
+  /*card content*/
+  .card__content {
+    max-width: 280px;
+  }
+
+  /*section form inicio /registro*/
+  .form__content {
+    height: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cards__content {
+    max-width: 250px;
+  }
+  .upload__content {
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero__image {
+    min-width: 250px;
+  }
+  .cards__content {
+    max-width: 230px;
+  }
+
+  .upload__content {
+    max-width: 250px;
+  }
+  #file__input {
+    max-width: 220px;
+  }
+}

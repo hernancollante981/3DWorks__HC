@@ -1,0 +1,107 @@
+/*animacion a los elementos del hero */
+
+/*hero animation fade */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*animación slide hacia arriba */
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/*animación slide de derecha a izquierda*/
+@keyframes slide-right {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/*animación del hero content*/
+.hero__content {
+  opacity: 0;
+  animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+  animation-delay: 0.4s;
+}
+
+/*animacion al titulo del hero*/
+.hero__title {
+  /*animación-duración animation-duration*/
+  animation: fade 1s ease-in, slide-up 1s ease-in-out;
+}
+
+/*animación del parrafo*/
+.hero__p {
+  opacity: 0;
+  /*animación-duración-animation-duration-forwards(
+    para que el elemento quede fijo al final 
+  )*/
+  animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+  animation-delay: 0.5s;
+}
+
+/*animacion de los botones */
+.hero__buttons a {
+  opacity: 0;
+
+  animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+  animation-delay: 0.5s;
+}
+/*animación de imagen del hero*/
+.hero__image {
+  opacity: 0;
+  animation: fade 0.8s ease-in forwards, slide-right 0.9s ease-in-out;
+  animation-delay: 0.5s;
+}
+
+/*animacion al titulo de las cards*/
+
+.cards__title {
+  opacity: 0;
+  animation: fade 1s ease-in forwards, slide-right 1s ease-in-out;
+  animation-delay: 0.4s;
+}
+/*animación del parrafo de las cards*/
+.cards__p {
+  opacity: 0;
+  animation: fade 0.8s ease-in forwards, slide-right 0.9s ease-in-out;
+  animation-delay: 0.4s;
+}
+
+/*animación de diapositivas sobre nosotros*/
+@keyframes slide-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  25% {
+    transform: translateX(20%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(-50%);
+  }
+
+  85% {
+    transform: translateX(-75);
+  }
+
+  100% {
+    transform: translateX(-100);
+  }
+}
+/* animation*/
+.slide-animation {
+  animation: slide-animation 30s infinite;
+}

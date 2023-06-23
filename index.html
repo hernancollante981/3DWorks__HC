@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3DWorks</title>
+
+    <!--style css-->
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <!--favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicon/favicon-16x16.png"
+    />
+    <link
+      srel="manifest"
+      href="./assets/img/favicon/site.webmanifest
+    "
+    />
+
+    <!--mediaqueries css-->
+    <link rel="stylesheet" href="./assets/mediaqueries.css" />
+
+    <!--animación css-->
+    <link rel="stylesheet" href="./assets/animation.css" />
+
+    <!--fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/ce3573d0d5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <!--body-->
+  <body class="body">
+    <!--Header-->
+    <header class="header">
+      <!--navbar-->
+      <nav class="header__navbar navbar">
+        <!--logo de la barra de navegación-->
+        <a href="./index.html"
+          ><img
+            src="./assets/img/logo__3dworks-removebg-preview.png"
+            alt="logo"
+            class="navbar__logo"
+          />
+        </a>
+        <!--se agrega el label con la imagen del menu-->
+        <label for="toggle-menu" class="navbar__toggle-menu">
+          <i class="fa fa-bars"></i>
+        </label>
+
+        <!--agrego el input y lo linkeo al label-->
+        <input type="checkbox" id="toggle-menu" />
+
+        <!--aca arranca el menu-->
+        <ul class="navbar__list">
+          <li class="navbar__link"><a href="#hero">Inicio</a></li>
+          <li class="navbar__link"><a href="#about">Nosotros</a></li>
+          <li class="navbar__link"><a href="#cards">Galeria</a></li>
+          <li class="navbar__link"><a href="#contact">Contacto</a></li>
+          <li class="navbar__link">
+            <!--boton upload-->
+            <a class="btn--upload" href="#upload">Upload</a>
+          </li>
+
+          <!--boton para salir del navbar en celu-->
+          <li>
+            <label for="toggle-menu" class="navbar__toggle-menu">
+              <i class="fa-sharp fa-regular fa-rectangle-xmark"></i>
+            </label>
+            <input type="checkbox" id="toggle-menu" />
+          </li>
+        </ul>
+
+        <!--boton de incio de sesión-->
+        <a class="btn--user" href="./login.html"
+          ><i class="fa-sharp fa-solid fa-circle-user"></i
+        ></a>
+      </nav>
+    </header>
+
+    <!--Main-->
+
+    <main class="main">
+      <!--Sección del Hero o portada  -->
+
+      <section id="hero" class="section hero__section">
+        <!--Contenedor del Hero-->
+        <div class="hero__content">
+          <!--Titulo del Hero-->
+          <h1 class="hero__title">
+            ¡Haz realidad tus ideas con
+            <span class="hero__span--title">3Dworks</span>!
+          </h1>
+
+          <!--Parrafo del Hero -->
+          <p class="hero__p">
+            En nuestro equipo, combinamos la magia de la impresión 3D, la
+            creatividad de la ilustración vectorial ,la precisión del CNC y
+            corte láser. ¿Quieres llevar tus proyectos al siguiente nivel?
+            Nosotros tenemos el poder para hacerlo posible. Imagina tus ideas
+            tomando forma, cobrando vida con cada detalle. ¡No esperes más!
+            Únete a nosotros y déjate sorprender por el potencial ilimitado de
+            tu visión.
+          </p>
+
+          <!--Bottones del Hero-->
+          <div class="hero__buttons">
+            <a href="./login.html" class="btn btn--login">Login</a>
+            <a href="./register.html" class="btn btn--register">Register</a>
+          </div>
+        </div>
+
+        <!--Imagen del Hero -->
+        <img
+          src="https://www.3dnatives.com/es/wp-content/uploads/sites/4/W3DP_Cover3.jpg"
+          alt="hero img "
+          class="hero__image"
+        />
+      </section>
+
+      <!--Sección sobre  nosotros -->
+      <section id="about" class="section about__section">
+        <!--Contenedor Sobre nosotros-->
+        <div class="about__content">
+          <!--Se crea el contenedor para el carrusel de imagenes o slider -->
+          <div class="about__slider">
+            <!--Sea crea la lista desordenada que contiene los slides del slider-->
+            <!--Slider animation es una clase adiccional para la animación-->
+            <ul class="about__slides slide-animation">
+              <!--Es un elemento de lista que representa un slide dentro del slider-->
+              <li id="slide1" class="about__slide">
+                <!--El identificador se asocia con el enlace del slide(#slide1)  -->
+                <a href="#slide1">
+                  <!--Titulo h2 en la imagen del carrusel-->
+                  <h2 class="about__title">Sobre Nosotros</h2>
+
+                  <!--parrafo descriptivo sobre nosotros -->
+                  <p class="about__p">
+                    En nuestra empresa, dos hermanos han seguido un fascinante
+                    camino. Comenzaron en diferentes campos, pero su destino los
+                    llevó al emocionante mundo del desarrollo web.
+                  </p></a
+                >
+              </li>
+              <!--Es un elemento de lista que representa un slide dentro del slider-->
+              <li id="slide2" class="about__slide">
+                <!--el identificador se asocia con el enlace del slide(#slide2)  -->
+                <a href="#slide2">
+                  <!--titulo h2 en la imagen del carrusel-->
+                  <h2 class="about__title">Superación</h2>
+
+                  <!--parrafo descriptivo sobre nosotros -->
+                  <p class="about__p">
+                    Con el talento excepcional del hermano menor, el mayor pudo
+                    dominar tecnologías clave como HTML, CSS, JavaScript y
+                    React.
+                  </p></a
+                >
+              </li>
+              <!--Es un elemento de lista que representa un slide dentro del slider-->
+              <li id="slide3" class="about__slide">
+                <!--el identificador se asocia con el enlace del slide(#slide3)  -->
+                <a href="#slide3">
+                  <!--titulo h2 en la imagen del carrusel-->
+                  <h2 class="about__title">Compromiso</h2>
+
+                  <!--parrafo descriptivo sobre nosotros -->
+                  <p class="about__p">
+                    Impulsados por su pasión por la fabricación y la tecnología,
+                    invirtieron en impresoras 3D de última generación, máquinas
+                    CNC de alta precisión, equipos de corte láser de alta
+                    calidad y las últimas herramientas de software. Fue así como
+                    nació nuestra marca.
+                  </p></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--sección de las cartas -->
+
+      <section id="cards" class="section cards_section">
+        <!--titulo de la sección de cartas-->
+        <h2 class="cards__title">Galeria</h2>
+        <!--parrafo -->
+        <p class="cards__p">
+          Nuestra plataforma te brinda la oportunidad de subir tus archivos en
+          formatos .stl, .svg, .cn, .gcode, .dwg, .dxf y nosotros, con nuestra
+          experiencia y maquinaria especializada, estamos listos para realizar
+          el trabajo requerido
+        </p>
+
+        <!--contenedor de las cartas-->
+        <div class="cards__content">
+          <!--carta-->
+          <div class="card">
+            <img
+              loading="lazy"
+              src="./assets/img/p3sk7d6u.jpg"
+              alt="imagen de las cards"
+              class="card__image"
+            />
+            <h3 class="card__title">
+              Archivo: <span class="card__title-span">.stl</span>
+            </h3>
+            <p class="card__description">
+              .STL "stereolithography" contiene modelos 3D listos para imprimir.
+              Es un estándar en la industria de la impresión 3D.
+            </p>
+          </div>
+          <!--carta-->
+          <div class="card">
+            <img
+              loading="lazy"
+              src="./assets/img/istockphoto-580108428-170667a.webp"
+              alt="imagen de las card"
+              class="card__image"
+            />
+            <h3 class="card__title">
+              Archivo: <span class="card__title-span">.nc</span>
+            </h3>
+            <p class="card__description">
+              .NC proporciona instrucciones específicas a máquinas CNC (Control
+              Numérico por Computadora) para crear piezas físicas.
+            </p>
+          </div>
+          <!--carta-->
+          <div class="card">
+            <img
+              loading="lazy"
+              src="./assets/img/CNC-Laser-Cut-Steel-1024x527.jpeg"
+              alt="imagen de la card"
+              class="card__image"
+            />
+            <h3 class="card__title">
+              Archivo: <span class="card__title-span">.dxf</span>
+            </h3>
+            <p class="card__description">
+              .DXF “Drawing Exchange Format” almacena gráficos y diseño
+              vectorial, siendo un formato común para el corte láser.
+            </p>
+          </div>
+          <!--carta-->
+          <div class="card">
+            <img
+              loading="lazy"
+              src="./assets/img/shutterstock_1169190697.jpg"
+              alt="imagen de la card"
+              class="card__image"
+            />
+            <h3 class="card__title">
+              Archivo: <span class="card__title-span">.dwg</span>
+            </h3>
+            <p class="card__description">
+              DWG es un formato CAD (Diseño Asistido por Computadora) para el
+              diseño en 2D y 3D. Se utiliza para almacenar planos .
+            </p>
+          </div>
+          <!--carta-->
+          <div class="card">
+            <img
+              loading="lazy"
+              src="./assets/img/impresora 3d.jpg"
+              alt=" imagen de la card"
+              class="card__image"
+            />
+            <h3 class="card__title">
+              Archivo: <span class="card__title-span">.gcode</span>
+            </h3>
+            <p class="card__description">
+              .GCODE contiene códigos que las impresoras 3D y otras máquinas de
+              fabricación aditiva utilizan para fabricar objetos.
+            </p>
+          </div>
+          <!--carta-->
+          <div class="card">
+            <img
+              loading="lazy"
+              src="./assets/img/plotter_cnc.jpg"
+              alt="imagen de la card"
+              class="card__image"
+            />
+            <h3 class="card__title">
+              Archivo: <span class="card__title-span">.svg</span>
+            </h3>
+            <p class="card__description">
+              SVG (Scalable Vector Graphics) almacena gráficos vectoriales y es
+              usado en diversas aplicaciones, incluyendo el corte con plotter.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--Sección carga de archivos -->
+      <section id="upload" class="section upload__section">
+        <!--Contenedor -->
+        <div class="upload__content">
+          <!--Formulario para carga de archivos-->
+          <form class="upload__form" enctype="multipart/form-data">
+            <!--Formulario para carga de archivos-->
+            <h3 class="upload__title">Sube tus Archivos</h3>
+
+            <!--Visualizador de archivos -->
+            <div class="upload__preview">
+              <img
+                src="./assets/img/iiyasv1p.jpg"
+                id="preview__image"
+                alt="vista previa"
+              />
+            </div>
+
+            <!--Se agrega el label para cargar el archivo-->
+            <label for="file__input"> Upload file</label>
+
+            <!--Agrego el input y lo linkeo al label-->
+            <input
+              type="file"
+              id="file__input"
+              accept=".stl,.nc.,.xwf,.svg,.gcode"
+            />
+            <!--agrego el input para enviar el archivo -->
+            <input type="submit" value="Subir" />
+          </form>
+        </div>
+      </section>
+
+      <!--Sección de contacto  -->
+
+      <section id="contact" class="section contact__section">
+        <!--Contenedor del contacto -->
+        <div class="contact__content">
+          <!--Titulo del contacto-->
+          <h2 class="contact__title">Contacto</h2>
+          <!--Información del contacto-->
+          <div class="contact__info">
+            <!--Columna de informacion-->
+            <div class="contact__info-colum">
+              <!--Titulo de la Columna de contacto-->
+              <h3 class="contact__info-title">Cordoba Capital - Argentina</h3>
+              <!--enlace que redirige a la url de google maps-->
+              <a
+                class="contact__info-link"
+                href="https://www.google.com/maps/place/Plaza+Rivadavia/@-31.3628892,-64.1605114,13z/data=!4m6!3m5!1s0x943298678b7d6461:0xf705f399f40ffc54!8m2!3d-31.3916664!4d-64.18484!16s%2Fg%2F11bx89cw8s?entry=ttu"
+                target="_blank"
+                ><i class="fa-solid fa-shop"></i>Barrio Juan B Justo</a
+              >
+              <!--enlace que redirige  a la url de gmail-->
+              <a
+                class="contact__info-link"
+                href="https://outlook.live.com/owa/"
+                target="_blank"
+                ><i class="fa-sharp fa-regular fa-envelope"></i>3Dworks@gmail</a
+              >
+              <!--enlace que redirige  al url de WhatsApp-->
+              <a
+                class="contact__info-link"
+                href="https://wa.me/5493516827859"
+                target="_blank"
+                ><i class="fa-sharp fa-solid fa-phone"></i>+54 3516827859</a
+              >
+            </div>
+          </div>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9566.245594364776!2d-64.17609871113005!3d-31.367613765996364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432afb6a14524a5%3A0x534e4b7a03f5dcdc!2sAXION%20energy!5e0!3m2!1ses!2sar!4v1685974905746!5m2!1ses!2sar"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </main>
+
+    <!--Footer-->
+
+    <footer class="footer">
+      <div class="footer__nav">
+        <ul class="footer__nav-menu">
+          <li class="footer__nav-link"><a href="#hero">Privacidad</a></li>
+          <li class="footer__nav-link"><a href="#about">Terminos de uso</a></li>
+          <li class="footer__nav-link"><a href="#contact">contactanos</a></li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <h3 class="footer__social-title">Redes</h3>
+        <div class="footer__social-icons">
+          <i class="fa-brands fa-twitter"><a href="">Twitter</a></i>
+          <i class="fa-brands fa-instagram"><a href="#">Instagram</a></i>
+          <i class="fa fa-facebook"><a href="#">Facebook</a></i>
+        </div>
+      </div>
+      <p class="footer__copyright">
+        © 2023 TrabajoIntegradorHernan.<span class="footer__copyright--span"
+          >Todos los derechos reservados.</span
+        >
+      </p>
+    </footer>
+  </body>
+</html>
