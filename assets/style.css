@@ -1,5 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap");
 
+:root {
+  /*background del body*/
+  --bg-body: linear-gradient(to top, red, black);
+  /*background negro  afecta directamente al header navbar / Footer */
+  --bg-black: rgb(0, 0, 0);
+  /*color de los items de navegación*/
+  --nav-item: white;
+  /*background de todas las secciones que tienen un contenedor Hero/Cards/Upload/Login/Register*/
+  --bg-content: rgba(21, 21, 25, 0.613);
+  /*para todo aquel texto qeu requiera el color blanco  */
+  --texto-blanco: #fff;
+  /*color negro en los botones*/
+  --btn-black: rgba(0, 0, 0, 0.542);
+  /*color del border*/
+  --br: white;
+  /*color del box shadow */
+  --box-s: black;
+  /*background parrafo del about*/
+  --bg-p: #8012c064;
+
+  /*colores especiales*/
+  --gold: gold;
+
+  --gray: gray;
+
+  --electric: #3742fa;
+
+  --fire: orangered;
+}
+
 /* Estilos generales */
 * {
   margin: 0;
@@ -10,7 +40,7 @@
 }
 
 body {
-  background: linear-gradient(to top, red, black);
+  background: var(--bg-body);
   font-family: "Nunito", sans-serif;
 }
 html {
@@ -23,9 +53,10 @@ html {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  width: 100%;
 }
 
-/* Header Navbar */
+/* Barra de navegación */
 .header__navbar {
   position: fixed;
   width: 100%;
@@ -36,15 +67,15 @@ html {
   align-items: center;
   top: 0;
   z-index: 1;
-  box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.817);
+  box-shadow: 5px 7px 20px var(--box-s);
   padding: 5px 5px;
-  background-color: black;
+  background: var(--bg-black);
 }
-
+/*Logo 3Dworks*/
 .navbar__logo {
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  color: var(--texto-blanco);
   text-decoration: none;
   width: 100%;
   max-width: 150px;
@@ -52,17 +83,17 @@ html {
   max-height: 65px;
 }
 
-/* toggle menu*/
+/*Despegar menu*/
 .navbar__toggle-menu {
   font-size: 32px;
-  color: white;
+  color: var(--nav-item);
   display: none;
 }
 #toggle-menu {
   display: none;
 }
 
-/*Navbar List*/
+/*Lista de barra de navegación */
 
 .navbar__list {
   display: flex;
@@ -70,41 +101,47 @@ html {
   gap: 30px;
   padding: 5px 5px;
 }
-
+/*Items de la barra de navegación*/
 .navbar__link {
   font-size: 32px;
   text-decoration: none;
 }
 .navbar__link a {
-  color: white;
+  color: var(--nav-item);
   border-radius: 3px;
   padding: 5px 5px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
 }
+/*Realiza un efecto cuando pasa el cursor por encima del elemento */
 .navbar__link a:hover {
-  color: white;
+  color: var(--gold);
 }
-/*botones agregados */
+
+/*Botones agregados */
+
+/*Boton que dirige a la sección de carga de archivos */
 .btn--upload {
   border-radius: 10px;
   padding: 5px 6px;
   text-transform: uppercase;
   transition: all 0.55s ease;
-  background-color: rgba(255, 0, 0, 0.637);
+  background-color: var(--electric);
 }
+/* Realiza un efecto cuando pasa el cursor por encima del elemento */
 .btn--upload:hover {
-  background: transparent;
-  border: 1px solid #fff;
+  background: var(--gray);
+  border: 1px solid var(--br);
   transform: translateX(10px);
 }
+/*Boton login user*/
 .btn--user {
   padding: 5px 5px;
   font-size: 32px;
-  color: #fff;
+  color: var(--nav-item);
 }
-/*main*/
 
+/*main*/
 .main {
   display: flex;
   flex-direction: column;
@@ -115,8 +152,7 @@ html {
   margin: 0 auto;
 }
 
-/*section*/
-
+/*Sección que impacta a todas las Secciónes*/
 .section {
   width: 100%;
   height: auto;
@@ -130,7 +166,7 @@ html {
   background-position: center center;
 }
 
-/*  Hero section */
+/* Sección del Hero o Portada */
 .hero__section {
   display: flex;
   justify-content: space-evenly;
@@ -138,7 +174,7 @@ html {
   height: 100vh;
   flex-wrap: wrap;
 }
-
+/*Contenedor del Hero */
 .hero__content {
   width: 400px;
   gap: 10px;
@@ -147,9 +183,9 @@ html {
   text-align: start;
   border-radius: 2rem;
   padding: 10px 10px;
-  background: #04063b84;
+  background: var(--bg-content);
 }
-
+/*Titulo del Hero*/
 .hero__title {
   font-size: 32px;
   background: linear-gradient(to left, rgb(195, 4, 225), rgb(227, 53, 9));
@@ -158,23 +194,24 @@ html {
   -webkit-background-clip: text;
   padding: 10px;
 }
+/*Span modificador del titulo */
 .hero__span--title {
   background: linear-gradient(to bottom, rgb(195, 4, 225), rgb(227, 53, 9));
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
 }
-
+/*Parrafo del Hero*/
 .hero__p {
   min-height: 200px;
   font-weight: 800;
   font-size: 16px;
-  color: #fff;
+  color: var(--texto-blanco);
   margin-top: 10px;
   padding: 5px 5px;
   gap: 5px;
 }
-
+/*Botones del Hero */
 .hero__buttons {
   display: flex;
   justify-content: start;
@@ -182,63 +219,73 @@ html {
   padding: 10px;
   margin-bottom: 10px;
 }
-
+/*Boton generico */
 .btn {
   display: inline-block;
-  color: #f1f1f1;
-  background: #1d1d22;
+  color: var(--texto-blanco);
+  background: var(--electric);
   font-size: 14px;
   font-weight: 500;
   padding: 10px 15px;
-  line-height: 1.4;
   cursor: pointer;
   text-decoration: none;
-  border: 1px solid #fff;
+  border: 1px solid var(--br);
   border-radius: 30px;
   text-transform: uppercase;
   transition: all 0.55s ease;
 }
+/*Realiza un efecto cuando pasa el cursor por encima del elemento */
 .btn:hover {
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid var(--br);
   transform: translateX(8px);
 }
+/*Boton de Registro*/
 .btn--register {
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid var(--br);
 }
-
+/*Imagen del Hero */
 .hero__image {
   width: 500px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.982);
+  box-shadow: 2px 2px 10px var(--box-s);
 }
 
-/*  About Section */
+/*Sección sobre Nosotros*/
+.about__section {
+  width: 100%;
+  height: 100vh;
+  box-shadow: 2px 2px 10px var(--box-s);
+  background-image: url(./img/imprimiendo-casa-victoriana.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+/*Contenedor sobre nosotros*/
 
 .about__section {
   width: 100%;
   height: 100vh;
   box-shadow: 2px 2px 10px rgba(1, 1, 1, 0.913);
-  background-image: url(https://images.unsplash.com/photo-1611117775350-ac3950990985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80);
+  background-image: url(./img/imprimiendo-casa-victoriana.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .about__content {
-  max-width: 500px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .about__slider {
-  position: relative;
   width: 100%;
   overflow: hidden;
 }
 .about__slides {
   display: flex;
   margin: 0;
-  max-width: 800px;
+  max-width: 100%;
 }
 
 .about__slide {
@@ -250,6 +297,20 @@ html {
   margin: 10px;
 }
 
+/*Estilo de cada slide*/
+.about__slide {
+  box-shadow: 2px 2px 9px var(--box-s);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
 .about__slide#slide1 {
   background: url(./img/615f2975dbf69.jpg) no-repeat center/cover;
 }
@@ -259,34 +320,35 @@ html {
 .about__slide#slide3 {
   background: url(./img/cnc-header.jpg) no-repeat center/cover;
 }
-
+/*Titulo sobre nosotros */
 .about__title {
+  width: 300px;
   font-size: 36px;
-  color: #e1f5fe;
+  color: var(--texto-blanco);
   margin-bottom: 40px;
   text-align: center;
 }
-
+/*Parrafo sobre nosotros */
 .about__p {
   font-size: 18px;
   font-weight: 800;
-  color: #fff;
-  background: #8012c064;
+  color: var(--texto-blanco);
+  background: var(--bg-p);
   text-align: center;
   height: auto;
   border-radius: 2rem;
   padding: 5px 5px;
+  width: 300px;
 }
 
-/*  Cards Section*/
-
+/*  Sección de las Cartas*/
 .cards_section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+/*Titulo de las cartas*/
 .cards__title {
   font-size: 32px;
   font-weight: 900;
@@ -296,19 +358,17 @@ html {
   -webkit-background-clip: text;
   text-align: center;
 }
-
+/*Parrafo descriptivo sobre las Cartas */
 .cards__p {
   margin-top: 20px;
   font-size: 20px;
   font-weight: 800;
-  color: #fff;
+  color: var(--texto-blanco);
   text-align: center;
   max-width: 500px;
   margin-bottom: 60px;
 }
-
-/*contenedor de las cards*/
-
+/*Contenedor de las Cartas*/
 .cards__content {
   display: grid;
   padding: 20px;
@@ -318,21 +378,21 @@ html {
   height: auto;
   gap: 30px;
   border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0.754);
+  background-color: var(--bg-content);
   transition: transform 0.5s;
 }
-
+/*Carta*/
 .card {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.5s, box-shadow 0.5s;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px var(--box-s);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
-  border: 2px solid #fff;
+  border: 2px solid var(--br);
   border-radius: 1rem;
   padding: 10px 10px;
 }
@@ -359,36 +419,37 @@ html {
 .card:hover {
   transform: scale(1.2);
   z-index: 2;
-  box-shadow: 0px 4px 10px rgb(0, 0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px var(--br);
 }
-
+/*Imagen de la Carta*/
 .card__image {
   width: 180px;
   height: 200px;
   align-items: center;
   border-radius: 1rem;
   margin-bottom: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px var(--box-s);
 }
-
+/*Titulo de la Carta*/
 .card__title {
   font-size: 24px;
-  color: gold;
+  color: var(--gold);
   margin-bottom: 10px;
 }
+/*span modificador del titulo */
 .card__title-span {
-  color: blue;
+  color: var(--electric);
 }
-
+/*Parrafo descriptivo de la Carta*/
 .card__description {
   font-size: 14px;
-  color: #fff;
+  color: var(--texto-blanco);
   margin-bottom: 20px;
   min-width: 150px;
   max-height: auto;
 }
 
-/*carga de archivos*/
+/*Sección para la carga de los Archivos*/
 .upload__section {
   width: 100%;
   display: flex;
@@ -404,44 +465,44 @@ html {
   background-size: cover;
   background-position: center center;
 }
-
+/*Contenedor de la carga de archivos  */
 .upload__content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+/*Formulario de la Carga de archivos*/
 .upload__form {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 300px;
-  background-color: #1d1d22;
+  background-color: var(--bg-content);
   gap: 10px;
   justify-content: center;
   border-radius: 20px;
   padding: 20px;
   width: 100%;
 }
-
+/*Titulo del formulario de carga de archivos*/
 .upload__title {
   font-size: 20px;
   font-weight: 800;
-  color: #fff;
+  color: var(--texto-blanco);
   text-align: center;
 }
-
+/*Vista previa de los archivos */
 .upload__preview {
   width: 100%;
   height: 200px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--texto-blanco);
+  border: 1px solid var(--br);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
 }
-
+/*Imagen previa del archivo */
 .upload__preview img {
   padding: 10px 10px;
   max-width: 100%;
@@ -450,35 +511,37 @@ html {
 }
 
 .upload__form label,
-.upload__form input[type="submit"] {
-  color: white;
+.upload__form input,
+[type="submit"] {
+  color: var(--texto-blanco);
   font-size: 16px;
 }
 
-.upload__form input[type="submit"],
-.upload__form input[type="file"] {
+.upload__form input,
+[type="submit"],
+.upload__form input,
+[type="file"] {
   padding: 10px 10px;
   border-radius: 20px;
-  background-color: #0306353a;
+  background-color: var(--btn-black);
   cursor: pointer;
   font-weight: 700;
-  color: #fff;
-  max-width: 400px;
+  color: var(--texto-blanco);
+  max-width: 300px;
 }
 
 .upload__form input[type="submit"]:hover {
   background: linear-gradient(to left, red, violet);
 }
 
-/*  Contact Section */
-
+/*  Sección de contacto */
 .contact__section {
   width: 100%;
   gap: 10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: #fff;
+  color: var(--texto-blanco);
   text-align: center;
   flex-wrap: wrap;
 
@@ -493,19 +556,19 @@ html {
   background-position: center center;
   padding-bottom: 30px;
 }
-
+/*Contenedor del contacto */
 .contact__content {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   padding: 5px 5px;
 }
-
+/*Titulo del contacto */
 .contact__title {
   font-size: 36px;
   margin-bottom: 40px;
 }
-
+/*Columna de contacto */
 .contact__info-colum {
   display: flex;
   flex-direction: column;
@@ -513,37 +576,37 @@ html {
   gap: 30px;
   font-size: 20px;
 }
-
+/*Items de navegacion del contacto   */
 .contact__info-link {
-  color: #fff;
+  color: var(--nav-item);
   font-size: 15px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contact__info-link:hover {
-  color: #030303;
+  color: var(--gold);
 }
 .contact__info-link i {
   padding: 10px;
-  color: orangered;
+  color: var(--fire);
   font-size: 14px;
 }
-/* Iframe */
 
+/* Iframe de google maps */
 iframe {
   min-width: 200px;
   height: 400px;
-  border-radius: 1rem;
+  border-radius: 16px;
 }
 
-/* Footer section */
+/* Footer sección */
 .footer {
   max-width: 1440px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.937);
+  background-color: var(--bg-black);
   text-align: center;
-  color: gray;
+  color: var(--gray);
   font-size: 16px;
   margin: 0 auto;
 }
@@ -554,21 +617,20 @@ iframe {
   justify-content: center;
   padding: 10px 10px;
 }
-
+/*Menu de navegación de pie de pagina */
 .footer__nav-menu {
   display: flex;
   gap: 10px;
 }
-
+/*Items de navegación del pie de pagina */
 .footer__nav-link a {
-  color: white;
+  color: var(--texto-blanco);
 }
 .footer__nav-link a:hover {
-  color: gold;
+  color: var(--gold);
 }
 
-/*footer social */
-
+/*Redes sociales del footer*/
 .footer__social {
   gap: 10px;
   display: flex;
@@ -576,68 +638,68 @@ iframe {
   text-align: center;
   margin-left: 20px;
   padding: 5px 5px;
+  max-width: 250px;
 }
-
+/*Redes sociales del pie de pagina */
 .footer__social-title {
-  color: white;
+  color: var(--texto-blanco);
   font-size: 20px;
   text-align: start;
 }
-
+/*Iconos de las redes sociales */
 .footer__social-icons {
   display: flex;
   flex-direction: column;
   text-align: start;
   gap: 10px;
   font-size: 18px;
-  color: gray;
   transition: color 0.3s ease;
+  color: var(--gray);
 }
 
-.footer__social-icons i:hover {
-  color: #ccc;
+/*Realiza un efecto cuando pasa el cursor por encima del elemento */
+.footer__social-icons :hover {
+  color: var(--nav-item);
 }
 .footer__social-icons a {
-  color: white;
   margin: 10px;
   padding: 2px 2px;
   background: linear-gradient(to left, blueviolet, red);
   color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
 }
-
+/*Derechos de autos de pie de pagina */
 .footer__copyright {
   display: flex;
   justify-content: center;
   font-size: 14px;
   padding-top: 10px;
+  gap: 5px;
 }
+/*Modificador Span del pie de pagina  */
 .footer__copyright--span {
-  color: #fff;
+  color: var(--texto-blanco);
   font-size: 16px;
+  font-weight: 700;
 }
-/*section form inicio /registro*/
+/*Sección formulario de Inicio /Registro*/
 .form__section {
-  /* background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.993),
-      rgba(0, 0, 0, 0)
-    ),
-    url(https://images.unsplash.com/photo-1636990649778-fd699d27c875?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1856&q=80);
-  background-repeat: no-repeat;*/
+  width: 100%;
   height: 100vh;
 }
-
+/*Contenedor del formulario de Inicio /Registro */
 .form__content {
+  margin-top: 30px;
   width: 300px;
   height: auto;
-  background-color: rgba(21, 21, 25, 0.619);
+  background-color: var(--bg-content);
   padding: 20px;
   text-align: center;
   border-radius: 1rem;
-  color: #fff;
+  color: var(--texto-blanco);
 }
-
+/*Titulo del formulario de Inicio/Registro */
 .form__title {
   padding: 10px;
   background: linear-gradient(to bottom, blueviolet, red);
@@ -648,18 +710,21 @@ iframe {
   font-size: 30px;
   font-weight: 500;
 }
-
-.form__content input[type="text"],
-.form__content input[type="email"],
-.form__content input[type="password"],
-.form__content button[type="submit"] {
-  border: 2px solid #3742fa;
+.form__content input,
+[type="text"],
+.form__content input,
+[type="email"],
+.form__content input,
+[type="password"],
+.form__content button,
+[type="submit"] {
+  border: 2px solid var(--electric);
   border-radius: 1rem;
   background: none;
   display: block;
   margin: 10px auto;
   padding: 5px 10px;
   text-align: center;
-  color: #fff;
+  color: var(--texto-blanco);
   font-size: 14px;
 }

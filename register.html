@@ -62,6 +62,7 @@
         </label>
         <!--agrego el input y lo linkeo al label-->
         <input type="checkbox" id="toggle-menu" />
+
         <!--aca arranca el menu-->
         <ul class="navbar__list">
           <li class="navbar__link"><a href="./index.html">Inicio</a></li>
@@ -75,19 +76,18 @@
     <!--Main-->
     <main class="main">
       <!--sección  de formuario -->
-
       <section class="section form__section">
         <form action="./index.html" class="form__content">
           <h2 class="form__title">Registro</h2>
+          <!--Etiqueta y campo para el nombre-->
           <label for="nombre">Nombre</label>
-
           <input
             type="text"
             id="nombre"
             placeholder="Ingrese su nombre"
             required
           />
-
+          <!--Etiqueta y campo para el apellido-->
           <label for="apellido">Apellido</label>
           <input
             type="text"
@@ -95,7 +95,7 @@
             placeholder="Escriba su Apellido"
             required
           />
-
+          <!--Etiqueta y campo para el email -->
           <label for="email">Email</label>
           <input
             type="email"
@@ -103,7 +103,7 @@
             placeholder="Escriba su Email"
             required
           />
-
+          <!--Etiqueta y campo para la contraseña-->
           <label for="contraseña">Contraseña</label>
           <input
             type="password"
@@ -112,29 +112,38 @@
             required
           />
           <br />
+          <!--checkbox para aceptar los terminos -->
           <label for="checkbox">
             <input type="checkbox" id="checkbox" required />
             estoy de acuerdo con
             <span class="form__span-checkbox">la informacion brindada</span>
           </label>
+          <!--Boton para enviar de formulario-->
           <button class="btn--form" type="submit">Registrarse</button>
         </form>
       </section>
 
-      <!--sección de contacto-->
-
+      <!--sección de contacto -->
       <section id="contact" class="section contact__section">
+        <!--Contenedor del contacto -->
         <div class="contact__content">
+          <!--Titulo del contacto-->
           <h2 class="contact__title">Contacto</h2>
+          <!--Información del contacto-->
           <div class="contact__info">
+            <!--Columna de informacion-->
             <div class="contact__info-colum">
+              <!--Titulo de la Columna de contacto-->
               <h3 class="contact__info-title">Cordoba Capital - Argentina</h3>
+
+              <!--enlace que redirige a la url de google maps-->
               <a
                 class="contact__info-link"
                 href="https://www.google.com/maps/place/Plaza+Rivadavia/@-31.3628892,-64.1605114,13z/data=!4m6!3m5!1s0x943298678b7d6461:0xf705f399f40ffc54!8m2!3d-31.3916664!4d-64.18484!16s%2Fg%2F11bx89cw8s?entry=ttu"
                 target="_blank"
                 ><i class="fa-solid fa-shop"></i>Barrio Juan B Justo</a
               >
+              <!--enlace que redirige a la url de gmail-->
               <a
                 class="contact__info-link"
                 href="https://outlook.live.com/owa/"
@@ -142,6 +151,7 @@
                 ><i class="fa-sharp fa-regular fa-envelope"></i
                 >3Dworks_@gmail</a
               >
+              <!--enlace que redirige a la url de WhatsApp-->
               <a
                 class="contact__info-link"
                 href="https://wa.me/5493516827859"
@@ -151,6 +161,8 @@
             </div>
           </div>
         </div>
+
+        <!--Iframe de google maps-->
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9566.245594364776!2d-64.17609871113005!3d-31.367613765996364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432afb6a14524a5%3A0x534e4b7a03f5dcdc!2sAXION%20energy!5e0!3m2!1ses!2sar!4v1685974905746!5m2!1ses!2sar"
           width="600"
@@ -164,26 +176,44 @@
     </main>
 
     <!--footer-->
-
     <footer class="footer">
+      <!-- Navegación del footer -->
       <div class="footer__nav">
+        <!--menu de la Navegación -->
         <ul class="footer__nav-menu">
-          <li class="footer__nav-link"><a href="#hero">Privacidad</a></li>
-          <li class="footer__nav-link"><a href="#about">Terminos de uso</a></li>
-          <li class="footer__nav-link"><a href="#contact">contactanos</a></li>
+          <!-- Enlace a la sección de privacidad -->
+          <li class="footer__nav-link">
+            <a href="#galeria">Privacidad</a>
+          </li>
+
+          <!-- Enlace a la sección de términos de uso -->
+          <li class="footer__nav-link">
+            <a href="#inicio">Terminos de uso</a>
+          </li>
+
+          <!-- Enlace para contactarnos -->
+          <li class="footer__nav-link">
+            <a href="#contact">contactanos</a>
+          </li>
         </ul>
       </div>
+      <!--Redes sociales del footer-->
       <div class="footer__social">
+        <!--Titulo h3 de las redes sociales-->
         <h3 class="footer__social-title">Redes</h3>
         <div class="footer__social-icons">
+          <!-- Icono y enlace a Twitter -->
           <i class="fa-brands fa-twitter"><a href="">Twitter</a></i>
+          <!-- Icono y enlace a Instagram -->
           <i class="fa-brands fa-instagram"><a href="">Instagram</a></i>
+          <!-- Icono y enlace a Facebook -->
           <i class="fa fa-facebook"><a href="">Facebook</a></i>
         </div>
       </div>
+      <!--Parrafo derechos de autor del footer -->
       <p class="footer__copyright">
         © 2023 TrabajoIntegradorHernan.<span class="footer__copyright--span"
-          >Todos los derechos reservados.</span
+          >3Dworks</span
         >
       </p>
     </footer>

@@ -1,3 +1,33 @@
+:root {
+  /*background del body*/
+  --bg-body: linear-gradient(to top, red, black);
+  /*Afecta a */
+  --texto-blanco: #fff;
+  /*background negro  afecta directamente al header navbar / Footer */
+  --bg-black: rgb(0, 0, 0);
+  /*background de todas las secciones que tienen un contenedor Hero/Cards/Upload/Login/Register*/
+  --bg-content: rgba(21, 21, 25, 0.613);
+  /*color negro en los botones*/
+  --btn-black: rgba(0, 0, 0, 0.542);
+  /*color del border*/
+  --br: white;
+  /*color del box shadow */
+  --box-s: black;
+  /*color de los items de navegación*/
+  --nav-item: white;
+  /*background parrafo del about*/
+  --bg-p: #8012c064;
+
+  /*colores especiales*/
+  --gold: gold;
+
+  --gray: gray;
+
+  --electric: #3742fa;
+
+  --fire: orangered;
+}
+
 /* Estilos generales */
 @media screen and (max-width: 998px) {
   .body {
@@ -15,14 +45,12 @@
   .navbar__toggle-menu {
     display: block;
     font-size: 32px;
-    color: #fff;
+    color: var(--nav-item);
   }
   /*Navbar List*/
   .navbar__list {
     top: 60px;
-    left: 48%;
-    right: 0;
-    width: 50%;
+    width: 100%;
     position: absolute;
     flex-direction: column;
     background: url(./img/hvxmg3c3.jpg);
@@ -32,20 +60,20 @@
     display: none;
     padding: 80px 30px;
     border-radius: 0px 0px 15px 15px;
-    border: 2px solid blue;
+    border: 2px solid var(--electric);
     border-top: 0px;
   }
   #toggle-menu:checked ~ .navbar__list {
     display: flex;
   }
   .navbar__link a {
-    background-color: red;
-    font-size: 18px;
+    background: var(--electric);
+    font-size: 22px;
   }
 
   /*botones agregados */
   .btn--upload {
-    background-color: blue;
+    background-color: var(--fire);
   }
 
   /*main*/
@@ -67,6 +95,7 @@
     max-width: 500px;
   }
   .hero__span--title {
+    width: 100%;
   }
   .hero__p {
     width: 100%;
@@ -78,13 +107,13 @@
     width: auto;
   }
   .hero__image {
-    min-width: 400px;
+    max-width: 400px;
     height: auto;
     margin-top: 90px;
   }
   /*about section*/
   .about__section {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
   .about__content {
@@ -93,8 +122,8 @@
   }
 
   /*card content*/
-  .card__content {
-    max-width: 280px;
+  .cards__content {
+    width: 100%;
   }
 
   /*section form inicio /registro*/
@@ -102,9 +131,34 @@
     height: auto;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+  /* mediaqueries about resolución: 375px */
+  .about__slider {
+    width: 100%;
+  }
+  .about__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .about__title {
+    max-width: 200px;
+    font-size: 20px;
+    padding: 5px 5px;
+  }
+  .about__p {
+    max-width: 200px;
+    font-size: 14px;
+    padding: 5px 0px;
+  }
   .cards__content {
-    max-width: 250px;
+    max-width: 100%;
   }
   .upload__content {
     max-width: 350px;
@@ -112,17 +166,105 @@
 }
 
 @media screen and (max-width: 425px) {
+  /* mediaqueries del hero resolución: 425px */
   .hero__image {
     min-width: 250px;
   }
+  /* mediaqueries de las cards resolución: 425px */
   .cards__content {
-    max-width: 230px;
+    max-width: 250px;
   }
-
+  /* mediaqueries de upload resolución: 425px */
   .upload__content {
     max-width: 250px;
   }
   #file__input {
     max-width: 220px;
+  }
+  /* mediaqueries about resolución: 425px */
+  .about__slider {
+    width: 100%;
+  }
+  .about__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .about__title {
+    max-width: 160px;
+    font-size: 20px;
+    padding: 5px 5px;
+  }
+  .about__p {
+    max-width: 160px;
+    font-size: 14px;
+    padding: 5px 0px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* mediaqueries about resolución: 425px */
+  .about__slider {
+    width: 280px;
+  }
+  .about__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .about__title {
+    max-width: 160px;
+    font-size: 20px;
+    padding: 5px 5px;
+  }
+  .about__p {
+    max-width: 160px;
+    font-size: 14px;
+    padding: 5px 0px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about__slider {
+    width: 230px;
+    overflow: hidden;
+  }
+
+  .about__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 450px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+  .about__title {
+    max-width: 130px;
+    font-size: 20px;
+    margin: 20px;
+  }
+  .about__p {
+    font-size: 12px;
+    width: 130px;
+    padding: 5px 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
   }
 }

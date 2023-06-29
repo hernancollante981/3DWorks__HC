@@ -1,28 +1,32 @@
-/*animacion a los elementos del hero */
-
-/*hero animation fade */
+/* Animation fade */
 @keyframes fade {
+  /*Desde el estado inicial ,el elemento tiene una opacidad de 0, lo que lo hace completamente trasparente */
   from {
     opacity: 0;
   }
+  /*Hasta el estado final ,el elemento tiene una opacidad de 1, lo que lo hace totalmente visible */
   to {
     opacity: 1;
   }
 }
-/*animación slide hacia arriba */
+/*Animación slide hacia arriba */
 @keyframes slide-up {
+  /*Desde el estado inicial el elemnto está deplazado hacia abajo en 100px desde su posición original */
   from {
     transform: translateY(100px);
   }
+  /*Hasta el estado final el elemento vuelve a su posición original  */
   to {
     transform: translateY(0);
   }
 }
 /*animación slide de derecha a izquierda*/
 @keyframes slide-right {
+  /*Desde el estado inicial el elemento está desplazado hacia la derecha en 100px*/
   from {
     transform: translateX(100px);
   }
+  /*Hasta el estado final el elemento vuelve a su posición original */
   to {
     transform: translateX(0);
   }
@@ -30,14 +34,15 @@
 /*animación del hero content*/
 .hero__content {
   opacity: 0;
-  animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+  animation: fade 1s ease-in forwards, slide-up 1s ease-in-out;
   animation-delay: 0.4s;
 }
 
 /*animacion al titulo del hero*/
 .hero__title {
+  opacity: 0;
   /*animación-duración animation-duration*/
-  animation: fade 1s ease-in, slide-up 1s ease-in-out;
+  animation: fade 1s ease-in forwards, slide-up 1s ease-in-out;
 }
 
 /*animación del parrafo*/
@@ -47,17 +52,17 @@
     para que el elemento quede fijo al final 
   )*/
   animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
-  animation-delay: 0.5s;
+  animation-delay: 0.4s;
 }
 
 /*animacion de los botones */
 .hero__buttons a {
   opacity: 0;
-
   animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
-  animation-delay: 0.5s;
+  animation-delay: 0.4s;
 }
 /*animación de imagen del hero*/
+/*la imagen se desplaza de derecha a izquierda*/
 .hero__image {
   opacity: 0;
   animation: fade 0.8s ease-in forwards, slide-right 0.9s ease-in-out;
@@ -65,43 +70,37 @@
 }
 
 /*animacion al titulo de las cards*/
-
+/*el titulo de las cartas se dezplaza de derecha a izquierda*/
 .cards__title {
   opacity: 0;
   animation: fade 1s ease-in forwards, slide-right 1s ease-in-out;
-  animation-delay: 0.4s;
+  animation-delay: 0.5s;
 }
 /*animación del parrafo de las cards*/
+/*El parrafo descriptivo de las cartas se dezplaza de derecha a izquierda*/
 .cards__p {
   opacity: 0;
   animation: fade 0.8s ease-in forwards, slide-right 0.9s ease-in-out;
-  animation-delay: 0.4s;
+  animation-delay: 0.5s;
 }
 
 /*animación de diapositivas sobre nosotros*/
+
 @keyframes slide-animation {
+  /* 0% el elemento se encuentra fuera de la vista desplazado hacia la derecha wn un 100%*/
   0% {
     transform: translateX(100%);
   }
-  25% {
-    transform: translateX(20%);
-  }
   50% {
+    /*en el 50% el elemento vuelve a su posicion original en el centro de la vista */
     transform: translateX(0%);
   }
-  75% {
-    transform: translateX(-50%);
-  }
-
-  85% {
-    transform: translateX(-75);
-  }
-
   100% {
-    transform: translateX(-100);
+    transform: translateX(-100%);
   }
+  /*en -100% el elemento está completamente desplazado hacia la izquierda, fuera de la vista nuevamente.*/
 }
-/* animation*/
+/* Animación carrusel o slide*/
 .slide-animation {
-  animation: slide-animation 30s infinite;
+  animation: slide-animation 60s infinite;
 }
