@@ -37,7 +37,7 @@
   .header__navbar {
     width: 100%;
   }
-  /*navbar logo*/
+  /*Logo 3Dworks*/
   .navbar_logo {
     min-width: 150px;
   }
@@ -47,7 +47,7 @@
     font-size: 32px;
     color: var(--nav-item);
   }
-  /*Navbar List*/
+  /*Lista de barra de navegación*/
   .navbar__list {
     top: 60px;
     width: 100%;
@@ -68,7 +68,7 @@
   }
   .navbar__link a {
     background: var(--electric);
-    font-size: 22px;
+    font-size: 18px;
   }
 
   /*botones agregados */
@@ -81,7 +81,7 @@
     max-width: 100%;
   }
 
-  /*  Hero section */
+  /*  Sección del Hero */
   .hero__section {
     gap: 30px;
     width: 100%;
@@ -111,28 +111,24 @@
     height: auto;
     margin-top: 90px;
   }
-  /*about section*/
+  /*Sección sobre nosotros*/
   .about__section {
     width: 100%;
     height: auto;
   }
-  .about__content {
-    height: auto;
-    max-width: 100%;
-  }
 
-  /*card content*/
+  /*Sección contenedor de las cartas */
   .cards__content {
     width: 100%;
   }
 
-  /*section form inicio /registro*/
+  /*Formulario inicio /registro*/
   .form__content {
     height: auto;
   }
 }
 @media screen and (max-width: 768px) {
-  /* mediaqueries about resolución: 375px */
+  /* mediaqueries Sobre Nosotros  resolución: 768px */
   .about__slider {
     width: 100%;
   }
@@ -166,22 +162,22 @@
 }
 
 @media screen and (max-width: 425px) {
-  /* mediaqueries del hero resolución: 425px */
+  /* mediaqueries del hero/portada resolución: 425px */
   .hero__image {
     min-width: 250px;
   }
-  /* mediaqueries de las cards resolución: 425px */
+  /* mediaqueries de las cartas resolución: 425px */
   .cards__content {
     max-width: 250px;
   }
-  /* mediaqueries de upload resolución: 425px */
+  /* mediaqueries contenedor de la carga de archivos resolución: 425px */
   .upload__content {
     max-width: 250px;
   }
   #file__input {
     max-width: 220px;
   }
-  /* mediaqueries about resolución: 425px */
+  /* mediaqueries Sobre Nosotros resolución: 425px */
   .about__slider {
     width: 100%;
   }
@@ -209,7 +205,7 @@
 }
 
 @media screen and (max-width: 375px) {
-  /* mediaqueries about resolución: 425px */
+  /* mediaqueries Sobre Nosotros resolución: 375px */
   .about__slider {
     width: 280px;
   }
@@ -237,8 +233,9 @@
 }
 
 @media screen and (max-width: 320px) {
+  /*Mediaqueries Ssobre Nosotros resolución*/
   .about__slider {
-    width: 230px;
+    width: 220px;
     overflow: hidden;
   }
 
